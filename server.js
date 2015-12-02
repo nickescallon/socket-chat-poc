@@ -23,7 +23,7 @@ io.on('connection', function(socket){
   socket.on('join', function(roomIdToJoin) {
     socket.join(roomIdToJoin);
     io.to(roomIdToJoin).emit('help has arrived');
-    io.to(roomIdToJoin).emit('chat message', 'Hi there, how can I help you?');
+    // io.to(roomIdToJoin).emit('chat message', 'Hi there, how can I help you?');
   });
 
   socket.on('chat message', function(msg) {
